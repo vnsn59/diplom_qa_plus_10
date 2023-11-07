@@ -9,7 +9,7 @@ INNER JOIN
     "Orders" AS ord ON cr.id = ord."courierId"
 WHERE 
     ord."inDelivery" = true
-GROUP BY c.login;
+GROUP BY cr.login;
 
 # Задание2
 SELECT
