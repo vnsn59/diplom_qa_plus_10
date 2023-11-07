@@ -1,14 +1,14 @@
 # Задание1
 	
 SELECT 
-	cr.login,
-	COUNT(ord."courierId") AS "Количество заказов в доставке"
+    cr.login,
+    COUNT(ord."courierId") AS "Количество заказов в доставке"
 FROM
-	"Couriers" AS cr
+    "Couriers" AS cr
 INNER JOIN
-	"Orders" AS ord ON cr.id = ord."courierId"
+    "Orders" AS ord ON cr.id = ord."courierId"
 WHERE 
-	ord."inDelivery" = true
+    ord."inDelivery" = true
 GROUP BY c.login;
 
 # Задание2
